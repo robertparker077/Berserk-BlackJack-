@@ -1,8 +1,8 @@
 # Berserk-BlackJack-
-Blackjack for Node.js Console 
+Blackjack for Node.js Console
 ## Description
 
-The goal of this project is to build an asynchronous Javascript blackjack game for the console using Node.js.
+The goal of this project is to build a Javascript blackjack game for the console using Node.js.
 
 ## Context
 
