@@ -24,7 +24,6 @@ _List of specifications (specs) for the completed goal. These are declarative se
 
 - [ ] Game is playable and fun
 - [ ] Code is readable and intuitive
-
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
 ---
