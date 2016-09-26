@@ -17,12 +17,12 @@ _List of specifications (specs) for the completed goal. These are declarative se
    - [ ] Player can hit or stay
    - [ ] Player loses if dealer has more points but hasn't busted
    - [ ] Player wins if dealer has fewer points at end of round
-   - [ ] Bust on 21
+   - [ ] User selectable number of decks 
+   - [ ] Currency/betting based model 
 
-- [ ] Manages multiple process threads
-  - [ ] ** seeking input from pro players - what are some good goals to demonstrate async  **
+   - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
+
 
 ## Quality Rubric
 
