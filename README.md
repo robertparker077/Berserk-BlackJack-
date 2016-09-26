@@ -19,8 +19,8 @@ _List of specifications (specs) for the completed goal. These are declarative se
    - [ ] Player wins if dealer has fewer points at end of round
    - [ ] User selectable number of decks
    - [ ] Currency/betting-based model
-   
-   - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
+
+- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
 
 
