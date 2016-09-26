@@ -6,8 +6,7 @@ The goal of this project is to build a Javascript blackjack game for the console
 
 ## Context
 
-This goal is designed to be completed after the user has completed another BlackJack game in javascript.  The idea is to highlight the differences between synchronous and asynchronous development.
-
+This goal is designed to be completed after the user has completed another BlackJack game in javascript.  
 ## Specifications
 
 _List of specifications (specs) for the completed goal. These are declarative sentences (statements) describing a feature of the final product._
