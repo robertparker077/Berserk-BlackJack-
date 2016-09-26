@@ -20,17 +20,13 @@ _List of specifications (specs) for the completed goal. These are declarative se
    - [ ] User selectable number of decks
    - [ ] Currency/betting-based model
 
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
-
-
-
 ## Quality Rubric
 
-_What are some appropriate quality objectives for this goal? These are statements about the internal characteristics of the product that demonstrate fine design and craftspersonship, not its external features._
+- [ ] Game is playable and fun
+- [ ] Code is readable and intuitive
 
-- Game is playable and fun: 25
-- Code is readable and intuitive: 25
-- Artifact is demonstrably asynchronous: 50
+- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
+
 ---
 
 <!-- LICENSE -->
