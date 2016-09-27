@@ -42,4 +42,4 @@ while( aPileOfCards.hasMoreCards() ) {
   console.log( aPileOfCards.drawCard() )
 }
 
-export Pile as default
+export default Pile

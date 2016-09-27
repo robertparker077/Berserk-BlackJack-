@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm test",
     "deck": "babel-node ./src/lib/deck.js",
-    "pile": "babel-node ./src/lib/pile.js"
+    "pile": "babel-node ./src/lib/pile.js",
+    "userPrompt": "babel-node ./src/lib/userPrompt.js"
   },
   "repository": {
     "type": "git",
