@@ -5,7 +5,7 @@ const SUITS = [
   { name: 'Spade', symbol: "♠️" },
 ]
 
-const RANKS = [
+const TYPES = [
   { name: 'Ace', value: [ 1, 11 ] },
   { name: 'Two', value: 2 },
   { name: 'Three', value: 3 },
@@ -22,24 +22,24 @@ const RANKS = [
 ]
 
 class Card {
-  constructor( suit, rank ) {
+  constructor( suit, type ) {
     this.suit = suit
-    this.rank = rank
+    this.type = type
   }
 
   toString() {
-    return `${this.suit.symbol} ${this.displayRank()}`
+    return `${this.suit.symbol} ${this.displayType()}`
   }
 
-  displayRank() {
-    if( this.rank.name === 'Ace' ) {
+  displayType() {
+    if( this.type.name === 'Ace' ) {
       return 'A'
-    } else if( this.rank.value === 10 && this.rank.name !== 'Ten' ) {
-      return this.rank.name.substring( 0, 1 )
+    } else if( this.type.value === 10 && this.type.name !== 'Ten' ) {
+      return this.type.name.substring( 0, 1 )
     } else {
-      return this.rank.value
+      return this.type.value
     }
   }
 }
 
-export { Card as default, SUITS, RANKS }
+export { Card as default, SUITS, TYPES }
