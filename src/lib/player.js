@@ -3,6 +3,6 @@ class Player {
     this.name = name
     this.wallet = wallet
   }
-} 
+}
 
 export default Player

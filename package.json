@@ -7,7 +7,8 @@
     "test": "npm test",
     "deck": "babel-node ./src/lib/deck.js",
     "pile": "babel-node ./src/lib/pile.js",
-    "userPrompt": "babel-node ./src/lib/userPrompt.js"
+    "userPrompt": "babel-node ./src/lib/userPrompt.js",
+    "game": "babel-node ./src/lib/game.js"
   },
   "repository": {
     "type": "git",

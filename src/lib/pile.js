@@ -1,5 +1,6 @@
 import Deck from './deck'
 
+
 class Pile {
   constructor( deckCount ) {
     this.pile = []
@@ -22,7 +23,7 @@ class Pile {
 
   drawCard() {
     if( this.hasMoreCards() ) {
-      return this.pile.pop()
+      return this.pile.shift()
     } else {
       throw "No more cards in pile!"
     }
@@ -35,11 +36,11 @@ class Pile {
   }
 }
 
-const aPileOfCards = new Pile(2)
-aPileOfCards.shuffle()
+// const aPileOfCards = new Pile(2)
+// aPileOfCards.shuffle()
 
-while( aPileOfCards.hasMoreCards() ) {
-  console.log( aPileOfCards.drawCard() )
-}
+// while( aPileOfCards.hasMoreCards() ) {
+// console.log( aPileOfCards.drawCard() )
+// }
 
 export default Pile
