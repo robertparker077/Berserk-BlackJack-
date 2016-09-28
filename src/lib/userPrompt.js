@@ -1,4 +1,5 @@
 import Player from './player'
+import Hand from './hand'
 
 const readlineSync = require('readline-sync');
 
@@ -10,9 +11,9 @@ let buildPlayers = () => {
   for (let index = 0; index < users; index++) {
     let playerName = readlineSync.question(`Player ${index+1}, What is your name?: `)
     let playerWallet = readlineSync.question(`${playerName}, How much money do you want to start with?: $`)
-    players.push(new Player(playerName, playerWallet))
+    players.push(new Player(playerName, playerWallet, new Hand()))
   }
-  players.push(new Player('Dealer', 10000))
+  players.push(new Player('Dealer', 10000, new Hand()))
   return players
 }
 
