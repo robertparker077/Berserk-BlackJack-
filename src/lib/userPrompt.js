@@ -22,4 +22,9 @@ let chooseDecks = () => {
   return deckChoice
 }
 
+let hitOrStay = (playerName) => {
+  if (readlineSync.keyInYN(`${playerName}, Do you want a HIT? (press y for YES): `)) {
+
+
+
 module.exports = { buildPlayers, chooseDecks }
