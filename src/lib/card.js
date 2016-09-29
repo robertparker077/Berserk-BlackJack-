@@ -25,6 +25,8 @@ class Card {
   constructor( suit, type ) {
     this.suit = suit
     this.type = type
+    this.value = type.value
+    this.name = type.name
   }
 
   toString() {
