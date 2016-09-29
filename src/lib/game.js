@@ -1,37 +1,43 @@
-import buildPlayers from './userPrompt'
-import chooseDecks from './userPrompt'
+import userPrompt from './userPrompt'
 import Pile from './pile'
 import Hand from './hand'
 
-// Create players from user input
-const usePlayers = buildPlayers.buildPlayers()
+const players = userPrompt.buildPlayers()
 
-// Create pile of cards from user chosen decks
-const usePile = new Pile(chooseDecks.chooseDecks())
-// Shuffle the pile of cards/decks
-usePile.shuffle()
+const pile = new Pile( userPrompt.chooseDecks() )
+pile.shuffle()
+
+// Get bets from each player
+// TODO: Implement betting
 
 // Deal cards to each player (including dealer)
-for (let origDeal=1; origDeal < 3; origDeal++) {
-  for (let plIndex=0; plIndex < usePlayers.length; plIndex++) {
-    usePlayers[plIndex].receiveCard(usePile.drawCard())
+for( let origDeal=1; origDeal < 3; origDeal++) {
+  for( let playerIndex=0; playerIndex < players.length; playerIndex++) {
+    players[playerIndex].receiveCard(pile.drawCard())
   }
 }
 
 // Display original hands
-for (let plIndex=0; plIndex < usePlayers.length; plIndex++) {
-  console.log(`${usePlayers[plIndex].name} \t ${usePlayers[plIndex].hand.hand.toString().replace(/,/g," ")}`)
+for (let playerIndex=0; playerIndex < players.length; playerIndex++) {
+  console.log( players[ playerIndex ].toString() )
 }
-// console.log(`${usePlayers[plIndex].name} \t ${usePlayers[plIndex].hand.hand.toString().replace(/,/g," ")}`)
 
 //Check for Blackjack
-for (let plIndex=0; plIndex < usePlayers.length; plIndex++) {
-    if (usePlayers[plIndex].hand.hand[0].type.name === "Ace" && usePlayers[plIndex].hand.hand[1].type.value === 10) {
-      // END GAME
-      } else if (usePlayers[plIndex].hand.hand[1].type.name === "Ace" && usePlayers[plIndex].hand.hand[0].type.value === 10) {
-        // END GAME
-        } else {
-          // BREAK
-          }
+for (let playerIndex=0; playerIndex < players.length; playerIndex++) {
+  if ( players[ playerIndex ].handValue() === 21 ) {
+    // END GAME
+  }
 }
-// PROMPT USER FOR HIT OR STAY
+
+// TODO: Write loop, omit the dealer from this loop
+for( let playerIndex = 0; playerIndex < players.length - 1; playerIndex++ ) {
+  while( userPrompt.hitOrStay( players[ playerIndex ], pile) && players[ playerIndex ].handValue() < 21 ) {
+    console.log( players[ playerIndex ].toString() )
+  }
+
+  console.log( players[ playerIndex ].toString() )
+}
+
+// TODO: Play for the dealer
+
+userPrompt.endGame( players )

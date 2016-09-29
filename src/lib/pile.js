@@ -25,6 +25,8 @@ class Pile {
     if( this.hasMoreCards() ) {
       return this.pile.shift()
     } else {
+      // Add some decks
+      console.log( 'Added some new decks to pile')
       throw "No more cards in pile!"
     }
   }
