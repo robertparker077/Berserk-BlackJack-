@@ -12,18 +12,18 @@ This goal is designed to be completed after the user has completed another Black
 _List of specifications (specs) for the completed goal. These are declarative sentences (statements) describing a feature of the final product._
 
  Handles basic rules of blackjack:
-   - [ ] Bust on 21
-   - [ ] Player can hit or stay
-   - [ ] Player loses if dealer has more points but hasn't busted
-   - [ ] Player wins if dealer has fewer points at end of round
-   - [ ] User selectable number of decks
-   - [ ] Currency/betting-based model
+   - [x] Bust on 21
+   - [x] Player can hit or stay
+   - [x] Player loses if dealer has more points but hasn't busted
+   - [x] Player wins if dealer has fewer points at end of round
+   - [x] User selectable number of decks
+   - [x] Currency/betting-based model
 
 ## Quality Rubric
 
-- [ ] Game is playable and fun
-- [ ] Code is readable and intuitive
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
+- [x] Game is playable and fun
+- [x] Code is readable and intuitive
+- [x] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
 ---
 

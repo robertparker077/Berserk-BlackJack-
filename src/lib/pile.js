@@ -1,6 +1,5 @@
 import Deck from './deck'
 
-
 class Pile {
   constructor( deckCount ) {
     this.pile = []
@@ -31,18 +30,9 @@ class Pile {
     }
   }
 
-  /* We may need to change this functionality depending on when
-  to end game based on number of cards */
   hasMoreCards() {
     return this.pile.length > 0
   }
 }
-
-// const aPileOfCards = new Pile(2)
-// aPileOfCards.shuffle()
-
-// while( aPileOfCards.hasMoreCards() ) {
-// console.log( aPileOfCards.drawCard() )
-// }
 
 export default Pile
