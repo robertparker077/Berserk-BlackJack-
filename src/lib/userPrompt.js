@@ -11,9 +11,9 @@ const buildPlayers = () => {
   for (let index = 0; index < users; index++) {
     let playerName = readlineSync.question(`Player ${index+1}, What is your name?: `)
     let playerWallet = readlineSync.question(`${playerName}, How much money do you want to start with?: $`)
-    players.push(new Player(playerName, playerWallet, new Hand()))
+    players.push(new Player(playerName, (playerWallet-10), new Hand()))
   }
-  players.push(new Player('DEALER', 10000, new Hand()))
+  players.push(new Player('DEALER', 100, new Hand()))
   return players
 }
 
@@ -27,6 +27,7 @@ const hitOrStay = (playerIndex, pile) => {
     playerIndex.receiveCard(pile.drawCard())
     return true
   } else {
+    console.log(`********** ********** ********** ********** **********`)
     console.log("On to the next...")
     return false
   }

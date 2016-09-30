@@ -3,12 +3,7 @@ import Card, { SUITS, TYPES } from './card'
 class Deck {
   constructor() {
     this.deck = this.buildDeck()
-
-    /* Different ways to test out of the created deck */
-    // console.log( this.deck, this.deck.length )
-    // console.log( this.deck.length )
-    // console.log(this.deck)
-    // this.deck.forEach( card => console.log( card.toString() ))
+    card => console.log( card.toString() )
   }
 
   suitReducer( memo, suit ) {

@@ -9,7 +9,7 @@ class Player {
 
   playNewHand( hand ) {
     this.hand = hand
-    this.bet = 0
+    this.bet = 10
   }
 
   receiveCard(card) {

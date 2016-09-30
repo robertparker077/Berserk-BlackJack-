@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --recursive --watch --require babel-register",
+    "test": "mocha --compilers js:babel-core/register src/test",
+    "test:watch": "npm test -- --watch",
     "deck": "babel-node ./src/lib/deck.js",
     "pile": "babel-node ./src/lib/pile.js",
     "userPrompt": "babel-node ./src/lib/userPrompt.js",
