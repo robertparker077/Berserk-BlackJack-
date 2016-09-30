@@ -4,6 +4,7 @@ class Player {
     this.wallet = wallet
     this.hand = hand
     this.bet = 0
+    this.status = ''
   }
 
   playNewHand( hand ) {
@@ -29,11 +30,11 @@ class Player {
   }
 
   toString() {
-    return `${this.name} \t ${this.hand.toString()}`
+    return `${this.name} \t ${this.hand.toString()} \t\t ${this.status}`
   }
 
   isDealer() {
-    return this.name === 'Dealer'
+    return this.name === 'DEALER'
   }
 
   hasNatural21() {

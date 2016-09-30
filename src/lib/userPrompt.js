@@ -13,7 +13,7 @@ const buildPlayers = () => {
     let playerWallet = readlineSync.question(`${playerName}, How much money do you want to start with?: $`)
     players.push(new Player(playerName, playerWallet, new Hand()))
   }
-  players.push(new Player('Dealer', 10000, new Hand()))
+  players.push(new Player('DEALER', 10000, new Hand()))
   return players
 }
 
@@ -25,26 +25,12 @@ const chooseDecks = () => {
 const hitOrStay = (playerIndex, pile) => {
   if (readlineSync.keyInYN(`${playerIndex.name}, Would you like to hit?: `)) {
     playerIndex.receiveCard(pile.drawCard())
-    console.log("you get cards!")
     return true
   } else {
-    console.log("looks like you're good to go")
+    console.log("On to the next...")
     return false
   }
 }
 
-const endGame = players => {
-  const dealer = players[ players.length - 1 ]
 
-  for( let index = 0; index < players.length - 1; index++ ) {
-    const player = players[ index ]
-
-    if( player.hasNatural21() ) {
-      player.win( player.bet * 1.5 + player.bet )
-    } else if( player.handValue() > dealer.handValue() || dealer.handValue() > 21 ) {
-      player.win( player.bet * 2 )
-    }
-  }
-}
-
-export default { buildPlayers, chooseDecks, hitOrStay, endGame }
+export default { buildPlayers, chooseDecks, hitOrStay }
