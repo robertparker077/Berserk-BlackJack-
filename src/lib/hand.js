@@ -20,14 +20,6 @@ class Hand {
     this.hand.push( card )
   }
 
-  checkForAce(card) {
-    if (card.type.name === "Ace") {
-      return true
-    } else {
-      return false
-    }
-  }
-
   value() {
     return this.cardValue
   }
