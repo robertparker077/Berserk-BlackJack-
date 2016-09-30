@@ -20,6 +20,7 @@ for( let origDeal=1; origDeal < 3; origDeal++) {
 // Display original hands
 for (let playerIndex=0; playerIndex < players.length; playerIndex++) {
   console.log( players[ playerIndex ].toString() )
+  console.log(players[ playerIndex ].hand.value())
 }
 
 //Check for Blackjack
